@@ -34,8 +34,6 @@
 
 @keyframes loaderr {
   to {
-    --version: "Certifique-se de que você usou pelo menos um dos subtópicos ou não quebrou a sintaxe. Se isso não ajudar, reinstale o tema.";
-    --Victims: "Falha.";
     pointer-events: none;
     backdrop-filter: none;
     background: linear-gradient(135deg, rgba(var(--color3), 0.8), rgba(var(--color4), 0.8));
@@ -62,17 +60,8 @@
 .pictureInPicture_e0c856:not(:has(.iframe_d5ef29))::after {
   position: absolute;
   
-  content: var(--Victims);
+  content: var(--victims);
   font-size: 150px;
   color: var(--color03);
   text-shadow: 0 0 10px currentcolor, 0 0 20px currentcolor;
-}
-
-.pictureInPicture_e0c856:not(:has(.iframe_d5ef29))::before {
-  position: absolute;
-  top: 95%;
-
-  content: var(--version);
-  font-size: 30px;
-  color: var(--color03);
 }
