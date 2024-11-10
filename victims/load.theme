@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap'); /* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
 :root {
-  --FVUI: "Victims";
+  --victims: "Victims";
   --font: "Comfortaa";
 }
 
-/* Paleta de cores com gradiente roxo e preto */
 :root {
-  --color1: 30, 40, 50;   /* Fundo adicional */
-  --color2: 9, 18, 24;    /* Fundo */
-  --color3: 138, 43, 226; /* Roxo */
-  --color4: 0, 0, 0;      /* Preto */
+  --color1: 30, 40, 50;
+  --color2: 9, 18, 24;
+  --color3: 138, 43, 226;
+  --color4: 0, 0, 0;
 
-  --text1: 174, 174, 174; /* Acento */
-  --text2: 107, 107, 107; /* Sem acento */
+  --text1: 174, 174, 174;
+  --text2: 107, 107, 107;
 }
 
 :root.theme-light {
@@ -23,7 +22,6 @@
   --color4: 0, 0, 0;
 }
 
-/* Opacidades e cores principais */
 :root {
   --color01: rgb(var(--color1));
   --color02: rgb(var(--color2));
@@ -34,7 +32,6 @@
   --opacity02: rgba(var(--color2), 0.9);
 }
 
-/* Animação de carregamento */
 @keyframes loaderr {
   to {
     --version: "Certifique-se de que você usou pelo menos um dos subtópicos ou não quebrou a sintaxe. Se isso não ajudar, reinstale o tema.";
@@ -45,7 +42,6 @@
   }
 }
 
-/* Estilos para o efeito de loading */
 .pictureInPicture_e0c856:not(:has(.iframe_d5ef29)) {
   display: flex;
   justify-content: center;
@@ -63,7 +59,6 @@
   backdrop-filter: blur(10px);
 }
 
-/* Texto de loading */
 .pictureInPicture_e0c856:not(:has(.iframe_d5ef29))::after {
   position: absolute;
   
