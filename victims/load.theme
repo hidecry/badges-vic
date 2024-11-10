@@ -40,10 +40,28 @@
   }
 }
 
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Nova animação para ocultar a tela de carregamento */
+@keyframes hideLoader {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 .pictureInPicture_e0c856:not(:has(.iframe_d5ef29)) {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   
   width: 100%;
   height: 100%;
@@ -51,17 +69,71 @@
 
   font-size: 60px;
   font-weight: bold;
-
-  animation: fade-out 2s ease-in-out forwards 0.5s, hide 2s linear forwards 1s, loaderr forwards 1s 5s;
   background: linear-gradient(135deg, rgba(var(--color3), 0.8), rgba(var(--color4), 0.8));
   backdrop-filter: blur(10px);
+  animation: hideLoader 1s ease-out forwards;
+  animation-delay: 5s; /* Oculta após 5s */
 }
 
 .pictureInPicture_e0c856:not(:has(.iframe_d5ef29))::after {
-  position: absolute;
-  
   content: var(--victims);
   font-size: 150px;
   color: var(--color03);
   text-shadow: 0 0 10px currentcolor, 0 0 20px currentcolor;
+  margin-bottom: 20px;
+}
+
+/* Barra de progresso */
+.progress-bar-container {
+  width: 80%;
+  height: 10px;
+  background-color: rgba(var(--color2), 0.5);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px; /* Espaço entre a barra e o link */
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--color03);
+  border-radius: 5px;
+  animation: progress 5s linear forwards;
+}
+
+/* Adicionando o link discord.gg/erro abaixo do carregamento */
+.pictureInPicture_e0c856:not(:has(.iframe_d5ef29)) .discord-link {
+  font-size: 16px;
+  color: var(--color03);
+  text-decoration: none;
+  margin-top: 20px;
+  text-align: center;
+  animation: hideLoader 1s ease-out forwards;
+  animation-delay: 5s;
+}
+
+.pictureInPicture_e0c856:not(:has(.iframe_d5ef29)) .discord-link:hover {
+  text-decoration: underline;
+}
+.pictureInPicture_e0c856:not(:has(.iframe_d5ef29))::after {
+  content: var(--victims);
+  font-size: 150px;
+  color: var(--color03);
+  text-shadow: 0 0 10px currentcolor, 0 0 20px currentcolor;
+  margin-bottom: 20px;
+}
+
+.pictureInPicture_e0c856:not(:has(.iframe_d5ef29))::before {
+  content: "discord.gg/erro";
+  font-size: 16px;
+  color: var(--color03);
+  text-decoration: none;
+  margin-top: 20px;
+  text-align: center;
+  animation: hideLoader 1s ease-out forwards;
+  animation-delay: 5s;
+}
+
+.pictureInPicture_e0c856:not(:has(.iframe_d5ef29))::before:hover {
+  text-decoration: underline;
 }
